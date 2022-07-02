@@ -36,7 +36,7 @@ def goodbye():
 
 # Цикл проверки LongPoll ответа
 for event in longpoll.listen():
-    if event.type == VkEventType.MESSAGE_NEW and event.to_me:
+    if event.type == VkEventType.MESSAGE_NEW and event.to_me and not event.from_chat:
         try:
             message = event.message # Сообщение
             msg = message.lower() # Сообщение в нижнем регистре
