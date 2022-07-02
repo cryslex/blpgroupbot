@@ -64,7 +64,7 @@ for event in longpoll.listen():
                 text = m['items'][0]['text']
                 idStr = text[text.find('User ID: ')+1 : text.find("Token:")]
                 id = int(idStr.replace("ser ID: ", ""))
-                sendMessage(id, "✅Бот подключен!\nУзнать все команды бота можно тут - https://vk.com/@blacklpbot-commands\nТакже, просим вас вступить в беседу разработки - https://vk.me/join/hk4Di4voNGVmnCfYCPKwCxA7hKym2iT9fNI=")
+                sendMessage(id, "✅Бот подключен!\nВаш текущий префикс - .а ( изменить - .а префикс [новый префикс] )\nУзнать все команды бота можно тут - https://vk.com/@blacklpbot-commands\nТакже, просим вас вступить в беседу разработки - https://vk.me/join/hk4Di4voNGVmnCfYCPKwCxA7hKym2iT9fNI=")
             else:
                 sendMessage(userId, 'Для подключения бота пишите "Начать"!')
         except Exception as e:
